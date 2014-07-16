@@ -44,6 +44,7 @@ grunt.initConfig({
 });
 
 grunt.registerTask('default', ['tpljson']);
+```
 
 * src源目录
 ```
