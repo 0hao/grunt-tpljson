@@ -57,6 +57,20 @@ tpl
     └── dian.tpl
 ```
 
+* delivery.tpl
+```
+<div class="delivery">
+    <div class="<%=sort_id=="0"?:"current":""%>">1</div>
+</div>
+```
+
+* address.tpl
+```
+<div class="address">
+    文一西路
+</div>
+```
+
 * build后生成
 
 ```
