@@ -21,7 +21,9 @@ grunt.loadNpmTasks('grunt-tpljson');
 
 
 ## tpljson task
-将tpl的html模板文件，转换为json格式，并根据目录合并压缩成新文件
+* 将tpl的html模板文件，转换为json格式，并根据目录合并压缩成新文件.
+* tpl内不允许出现`'`单引号，只能是双引号`"`，包括模板引擎内的逻辑
+* tpl内生成json的key为其文件名，合并后的tpl.js的文件名为目录名，所以不允许.tpl文件直接暴露在`options.src`目录下
 
 #### Example config
 
@@ -42,7 +44,28 @@ grunt.initConfig({
 });
 
 grunt.registerTask('default', ['tpljson']);
+
+
 ```
+tpl
+├── delivery
+│   ├── delivery.tpl
+│   └── address.tpl
+│   
+└── dian
+    └── dian.tpl
+
+build
+
+```
+tpl
+├── delivery.tpl.js
+└── dian.tpl.js
+```
+
+
+```
+
 
 ## Options
 
@@ -50,7 +73,7 @@ grunt.registerTask('default', ['tpljson']);
 |--------------------------------|-----------------|---------|
 | `src` | 源目录 | - |
 | `srcExt` | 目录下匹配文件的后缀 | `.tpl` |
-| `dest` | 合并导出目录 |  |
+| `dest` | 合并导出目录 | - |
 | `ext` | 合并导出文件后缀 | `.tpl.js` |
 | `separator` | 合并文件的分割符号 | `,` |
 | `jsonp` | jsonp的callback命名 | `jstpl` |
@@ -59,5 +82,5 @@ grunt.registerTask('default', ['tpljson']);
 ## Release History
 
 
- * 2013-01-09   v0.2.0
- * 2012-11-01   v0.1.0   
+ * 2014-7-16   v0.2.0
+ * 2014-7-15   v0.1.0   
