@@ -1,0 +1,1 @@
+jstpl({'dian':'<div class="dian">dian here</div>','dian_list':'<div class="dian_list">/*注释*/</div>'})

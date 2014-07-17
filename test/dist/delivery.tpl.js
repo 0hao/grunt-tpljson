@@ -1,0 +1,1 @@
+jstpl({'address':'<div class="address_wrap">文一西路</div>','delivery':'<div class="delivery"><div class="<%=sort_id=="0"?:"current":""%>">1</div></div>'})

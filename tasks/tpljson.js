@@ -1,8 +1,8 @@
 /*
  * grunt-tpljson
- * http://gruntjs.com/
+ * https://github.com/0hao/grunt-tpljson
  *
- * Copyright (c) 2014 Sindre Sorhus, contributors
+ * Copyright (c) 2014 lin
  * Licensed under the MIT license.
  */
 
@@ -88,7 +88,7 @@ module.exports = function (grunt) {
       if (multi_src.length < 1) {
         grunt.log.warn('Destination not written because multi_src was empty.');
       } else {
-        var destfile = options.dest + '/'+key + options.ext,  
+        var destfile = options.dest + '/'+key + options.destExt,  
             srcfile = options.jsonp + '({' + multi_src + '})';
         grunt.file.write( destfile, srcfile);
         grunt.log.writeln('done ' + chalk.cyan(destfile) + ' ' + prettyBytes(srcfile.length));
