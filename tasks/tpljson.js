@@ -24,6 +24,7 @@ module.exports = function (grunt) {
 
     var srcExt_reg = new RegExp(options.srcExt+'$');
 
+    //循环目录建立映射
     grunt.file.recurse(options.src, function callback(abspath, rootdir, subdir, filename) {
 
       if(subdir && srcExt_reg.test(filename)) {
@@ -33,10 +34,7 @@ module.exports = function (grunt) {
       
     });
     
-    //loop dir
-    for (var key in files_map) {
-      //minFiles(key);
-
+    function buildFiles(key){
       var files = files_map[key];
 
       var multi_src = files.filter(function(filepath) {
@@ -93,7 +91,12 @@ module.exports = function (grunt) {
         grunt.file.write( destfile, srcfile);
         grunt.log.writeln('done ' + chalk.cyan(destfile) + ' ' + prettyBytes(srcfile.length));
       }
-    };
+    }
+
+    //loop dir
+    for (var key in files_map) {
+      buildFiles(key);
+    }
 
   });
 };

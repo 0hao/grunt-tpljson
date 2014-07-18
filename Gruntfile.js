@@ -51,5 +51,5 @@ module.exports = function (grunt) {
   //grunt.loadNpmTasks('grunt-contrib-internal'); build-contrib
 
   grunt.registerTask('test', ['clean', 'tpljson', 'nodeunit']);
-  //grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['jshint', 'test']);
 };
