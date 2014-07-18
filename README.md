@@ -46,6 +46,18 @@ grunt.initConfig({
 grunt.registerTask('default', ['tpljson']);
 ```
 
+## Options
+
+| Option                         | Description     | Default |
+|--------------------------------|-----------------|---------|
+| `src` | 源目录 | - |
+| `srcExt` | 目录下匹配文件的后缀 | `.tpl` |
+| `dest` | 合并导出目录 | - |
+| `destExt` | 合并导出文件后缀 | `.tpl.js` |
+| `separator` | 合并文件的分割符号 | `,` |
+| `jsonp` | jsonp的callback命名 | `jstpl` |
+
+
 ## 测试
 
 #### src源目录
@@ -77,7 +89,7 @@ test/src
 <div class="delivery">
     <div class="<%=sort_id=="0"?:"current":""%>">1</div>
 </div>
-*
+
 ```
 
 * dian.tpl
@@ -119,18 +131,6 @@ jstpl({'address':'<div class="address_wrap">文一西路</div>','delivery':'<div
 ```javascript
 jstpl({'dian':'<div class="dian">dian here</div>','dian_list':'<div class="dian_list">/*注释*/</div>'})
 ```
-
-
-## Options
-
-| Option                         | Description     | Default |
-|--------------------------------|-----------------|---------|
-| `src` | 源目录 | - |
-| `srcExt` | 目录下匹配文件的后缀 | `.tpl` |
-| `dest` | 合并导出目录 | - |
-| `destExt` | 合并导出文件后缀 | `.tpl.js` |
-| `separator` | 合并文件的分割符号 | `,` |
-| `jsonp` | jsonp的callback命名 | `jstpl` |
 
 
 ## Release History
