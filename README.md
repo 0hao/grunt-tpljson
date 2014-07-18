@@ -1,4 +1,4 @@
-# grunt-tpljson v0.2.0
+# grunt-tpljson v0.2.1
 
 > Concat files from tpl(HTML) to json(Minify HTML)
 
@@ -135,6 +135,6 @@ jstpl({'dian':'<div class="dian">dian here</div>','dian_list':'<div class="dian_
 
 ## Release History
 
-
- * 2014-7-16   v0.2.0
- * 2014-7-15   v0.1.0   
+ * 2014-7-18   v0.2.1 补充测试用例，文档更新
+ * 2014-7-16   v0.2.0 Initial release.
+ * 2014-7-15   v0.1.0 demo
