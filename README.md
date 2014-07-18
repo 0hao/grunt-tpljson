@@ -22,7 +22,7 @@ grunt.loadNpmTasks('grunt-tpljson');
 
 ## 说明
 * 循环`options.src`下的文件目录，查找.tpl文件，生成json格式，合并压缩
-* 单个tpl转换生成的json的key为其文件名，合并后的.tpl.js的文件名为目录名，所以不允许.tpl文件直接暴露在`options.src`目录下
+* 单个tpl转换生成的json的key为其文件名，合并后`.tpl.js`的文件名为目录名，所以不允许`.tpl`文件直接暴露在`options.src`目录下
 * tpl文件内不允许出现`'`单引号，只能是双引号`"`，包括模板引擎内的逻辑
 
 #### Example config
