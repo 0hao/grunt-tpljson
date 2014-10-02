@@ -71,7 +71,9 @@ module.exports = function (grunt) {
           t_src.push(item.trim());
         });
 
-        src = "'" + name_r + "':" + "'" + t_src.join('') + "'";
+        var t_src_str = t_src.join('').replace(/\'/g, '"');
+
+        src = "'" + name_r + "':" + "'" + t_src_str + "'";
 
         return src;
       }).join(options.separator);

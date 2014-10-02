@@ -1,4 +1,4 @@
-# grunt-tpljson v0.2.1
+# grunt-tpljson v0.2.2
 
 > Concat files from tpl(HTML) to json(Minify HTML)
 
@@ -23,7 +23,7 @@ grunt.loadNpmTasks('grunt-tpljson');
 ## 说明
 * 循环`options.src`下的文件目录，查找.tpl文件，生成json格式，合并压缩
 * 单个tpl转换生成的json的key为其文件名，合并后`.tpl.js`的文件名为目录名，所以不允许`.tpl`文件直接暴露在`options.src`目录下
-* tpl文件内不允许出现`'`单引号，只能是双引号`"`，包括模板引擎内的逻辑
+* 出于json格式化，会替模板内的`'`单引号为`"`
 
 #### Example config
 
@@ -134,7 +134,7 @@ jstpl({'dian':'<div class="dian">dian here</div>','dian_list':'<div class="dian_
 
 
 ## Release History
-
+ * 2014-10-2   v0.2.2 增加`'`替换`"`
  * 2014-7-18   v0.2.1 补充测试用例，文档更新
  * 2014-7-16   v0.2.0 Initial release
  * 2014-7-15   v0.1.0 demo
